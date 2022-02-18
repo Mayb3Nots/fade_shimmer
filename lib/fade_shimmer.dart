@@ -13,8 +13,8 @@ class FadeShimmer extends StatefulWidget {
   final Color? highlightColor;
   final Color? baseColor;
   final double radius;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
 
   /// light or dark with predefined highlightColor and baseColor
   /// need to pass this or highlightColor and baseColor
@@ -30,8 +30,8 @@ class FadeShimmer extends StatefulWidget {
       this.fadeTheme,
       this.highlightColor,
       this.baseColor,
-      required this.width,
-      required this.height})
+      this.width,
+      this.height})
       : assert(
             (highlightColor != null && baseColor != null) || fadeTheme != null),
         super(key: key);
